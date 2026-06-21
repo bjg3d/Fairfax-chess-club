@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fairfax Chess Club</title>
+  <meta name="description" content="Fairfax Chess Club is a welcoming chess community for casual play, rated games, lessons, tournaments, and players of every level." />
+  <meta property="og:title" content="Fairfax Chess Club" />
+  <meta property="og:description" content="Casual play, rated games, lessons, tournaments, and a welcoming chess community in Fairfax." />
+  <meta property="og:image" content="assets/social-preview.svg" />
+  <meta name="theme-color" content="#0b1730" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --bg: #071325;
+      --bg-2: #0b1730;
+      --panel: #101f3d;
+      --panel-2: #13264b;
+      --text: #f8fafc;
+      --muted: #c9d3e7;
+      --soft: #8fa2c8;
+      --gold: #f2c86e;
+      --gold-2: #d59b36;
+      --line: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+      --radius: 26px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(242, 200, 110, 0.16), transparent 34rem),
+        radial-gradient(circle at 85% 8%, rgba(66, 103, 178, 0.2), transparent 30rem),
+        linear-gradient(180deg, #08162b 0%, #071325 38%, #050b16 100%);
+      line-height: 1.55;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      z-index: 99;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #071325;
+      font-weight: 800;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 19, 37, 0.82);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      font-size: 1.1rem;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 0.94rem;
+      padding: 9px 12px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      outline: none;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid rgba(242, 200, 110, 0.5);
+      border-radius: 999px;
+      color: #08162b;
+      background: linear-gradient(135deg, #ffe7a4, var(--gold-2));
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 18px 40px rgba(213, 155, 54, 0.22);
+    }
+
+    .button.secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: none;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .section {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 82px 0;
+      position: relative;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      align-items: center;
+      gap: 42px;
+      min-height: calc(100vh - 78px);
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      margin: 0 0 20px;
+      padding: 8px 12px;
+      border: 1px solid rgba(242, 200, 110, 0.32);
+      border-radius: 999px;
+      color: #ffe7a4;
+      background: rgba(242, 200, 110, 0.08);
+      font-weight: 850;
+      font-size: 0.9rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(242, 200, 110, 0.14);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      max-width: 900px;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 5vw, 4.1rem);
+      max-width: 820px;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.07rem, 2vw, 1.25rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-card {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.05));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-note {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      background: rgba(7, 19, 37, 0.78);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-note strong {
+      display: block;
+      color: #fff6de;
+      font-size: 0.98rem;
+    }
+
+    .hero-note span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: -34px;
+    }
+
+    .info-card,
+    .feature-card,
+    .event-card,
+    .faq-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(16, 31, 61, 0.74);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-card {
+      padding: 22px;
+    }
+
+    .card-label {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 950;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .info-card p,
+    .feature-card p,
+    .event-card p,
+    .faq-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-head p {
+      max-width: 500px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .feature-card {
+      padding: 24px;
+      min-height: 230px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      right: -52px;
+      bottom: -52px;
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      background: rgba(242, 200, 110, 0.08);
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      color: #08162b;
+      background: var(--gold);
+      font-size: 1.35rem;
+      font-weight: 950;
+    }
+
+    .banner {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+      padding: 32px;
+      border-radius: calc(var(--radius) + 8px);
+      border: 1px solid rgba(242, 200, 110, 0.28);
+      background:
+        linear-gradient(135deg, rgba(242, 200, 110, 0.13), rgba(255, 255, 255, 0.05)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .banner p {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .banner-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .banner-list li {
+      padding: 13px 14px;
+      border-radius: 16px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .banner-list strong {
+      color: var(--text);
+    }
+
+    .events {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .event-card {
+      overflow: hidden;
+    }
+
+    .event-date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      color: #08162b;
+      background: linear-gradient(135deg, #ffe7a4, var(--gold-2));
+      font-weight: 950;
+    }
+
+    .event-card .content {
+      padding: 22px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      color: #fff6de;
+      background: rgba(242, 200, 110, 0.11);
+      border: 1px solid rgba(242, 200, 110, 0.18);
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .join-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .join-card {
+      min-height: 100%;
+      padding: 32px;
+      border-radius: calc(var(--radius) + 10px);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04)),
+        var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .join-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -90px -140px auto;
+      width: 330px;
+      height: 330px;
+      background: url("assets/board-accent.svg") center / contain no-repeat;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      counter-reset: steps;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: var(--gold);
+      color: #08162b;
+      font-weight: 950;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .faq-card {
+      padding: 24px;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 32px;
+      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(135deg, #ffe7a4, #d59b36);
+      color: #071325;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card p {
+      margin: 12px 0 0;
+      max-width: 720px;
+      color: rgba(7, 19, 37, 0.78);
+      font-weight: 650;
+    }
+
+    .contact-card .button {
+      background: #071325;
+      color: var(--text);
+      border-color: rgba(7, 19, 37, 0.2);
+      box-shadow: none;
+      white-space: nowrap;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .footer-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--soft);
+      font-size: 0.94rem;
+    }
+
+    .footer-inner a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .banner,
+      .join-grid,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .features,
+      .events {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-info {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 16px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .nav-links a:not(.button) {
+        padding-left: 0;
+      }
+
+      .features,
+      .events,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 42px;
+      }
+
+      .hero-note {
+        position: static;
+        border-radius: 0 0 var(--radius) var(--radius);
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-inner p:last-child {
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Fairfax Chess Club home">
+        <img src="assets/logo.svg" alt="Fairfax Chess Club logo" />
+        <span>Fairfax Chess Club</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#join">Join</a>
+        <a href="#faq">FAQ</a>
+        <a class="button" href="mailto:fairfaxchessclub@example.com?subject=Fairfax%20Chess%20Club%20Inquiry">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="section hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Fairfax, Virginia chess community</p>
+        <h1 id="hero-title">Your next great move starts here.</h1>
+        <p class="lead">A welcoming home for casual games, rated play, lessons, tournaments, and chess friends of every age and strength.</p>
+        <div class="hero-actions">
+          <a class="button" href="#join">Join the club</a>
+          <a class="button secondary" href="#events">See upcoming events</a>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Chess club illustration">
+        <img src="assets/hero-board.svg" alt="Illustration of chess pieces on a chessboard" />
+        <div class="hero-note">
+          <strong>Open to beginners, tournament players, families, and returning players.</strong>
+          <span>Bring a board if you have one. Bring curiosity either way.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Club quick information">
+      <div class="quick-info">
+        <article class="info-card">
+          <p class="card-label">When</p>
+          <h3>Weekly meetup</h3>
+          <p><!-- EDIT THIS --> Replace with your regular day and time, for example: Wednesdays, 6:30 to 9:30 PM.</p>
+        </article>
+        <article class="info-card">
+          <p class="card-label">Where</p>
+          <h3>Fairfax area</h3>
+          <p><!-- EDIT THIS --> Replace with your venue name, street address, parking notes, and room number.</p>
+        </article>
+        <article class="info-card">
+          <p class="card-label">Who</p>
+          <h3>All levels welcome</h3>
+          <p>Kids, adults, new players, club regulars, and tournament competitors can all find a good game.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Why play with us?</p>
+          <h2 id="about-title">A serious chess club without the intimidating atmosphere.</h2>
+        </div>
+        <p>Fairfax Chess Club is built around friendly competition, steady improvement, and making it easy for local players to find one another.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature-card">
+          <div class="icon">♟</div>
+          <h3>Casual play</h3>
+          <p>Drop in, meet players, and get paired for friendly games at your pace.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">♜</div>
+          <h3>Rated nights</h3>
+          <p>Run club-rated or USCF-style events when enough players are interested.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">♞</div>
+          <h3>Lessons</h3>
+          <p>Learn openings, tactics, endgames, and post-game analysis from stronger players.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">♛</div>
+          <h3>Community</h3>
+          <p>Connect with local chess families, scholastic players, coaches, and tournament regulars.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="this-week-title">
+      <div class="banner">
+        <div>
+          <p class="eyebrow">This week</p>
+          <h2 id="this-week-title">Come for a game. Stay for the analysis.</h2>
+          <p><!-- EDIT THIS --> Replace this with the most important weekly announcement: meeting status, special lecture, tournament round, or venue change.</p>
+        </div>
+        <ul class="banner-list">
+          <li><strong>Format:</strong> Casual games and optional analysis</li>
+          <li><strong>Bring:</strong> Chess set, clock, scorebook, or just yourself</li>
+          <li><strong>Cost:</strong> <!-- EDIT THIS --> Replace with dues, free trial, or donation info</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="events" class="section" aria-labelledby="events-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Events</p>
+          <h2 id="events-title">Regular formats for every kind of player.</h2>
+        </div>
+        <p>Use these sample cards as placeholders. Update dates, registration links, and formats as the club calendar becomes firm.</p>
+      </div>
+
+      <div class="events">
+        <article class="event-card">
+          <div class="event-date"><span>Weekly</span><span>Open Play</span></div>
+          <div class="content">
+            <h3>Club night</h3>
+            <p>Friendly games, clock practice, casual analysis, and newcomer pairings.</p>
+            <div class="pill-row"><span class="pill">All levels</span><span class="pill">Drop-in</span></div>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date"><span>Monthly</span><span>Swiss</span></div>
+          <div class="content">
+            <h3>Rated tournament</h3>
+            <p>A low-pressure tournament night with pairings, clocks, and notation.</p>
+            <div class="pill-row"><span class="pill">Tournament</span><span class="pill">Clock required</span></div>
+          </div>
+        </article>
+        <article class="event-card">
+          <div class="event-date"><span>Quarterly</span><span>Workshop</span></div>
+          <div class="content">
+            <h3>Improvement session</h3>
+            <p>Focused lessons on tactics, openings, endgames, or annotated master games.</p>
+            <div class="pill-row"><span class="pill">Learning</span><span class="pill">Beginner friendly</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="join" class="section" aria-labelledby="join-title">
+      <div class="join-grid">
+        <div class="join-card">
+          <p class="eyebrow">Join</p>
+          <h2 id="join-title">Your first visit is simple.</h2>
+          <p class="lead">No rating is required. No perfect openings are required. Just show up ready to play, learn, and meet other chess people.</p>
+          <div class="hero-actions">
+            <a class="button" href="mailto:fairfaxchessclub@example.com?subject=I%20want%20to%20visit%20Fairfax%20Chess%20Club">Email before visiting</a>
+            <a class="button secondary" href="#faq">Read FAQ</a>
+          </div>
+        </div>
+        <div class="join-card">
+          <h3>How it works</h3>
+          <ol class="steps">
+            <li><span>Check the latest meeting note on this page before you come.</span></li>
+            <li><span>Introduce yourself when you arrive so we can help you find a good pairing.</span></li>
+            <li><span>Play a few games, review interesting positions, and decide whether membership makes sense.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions players usually ask first.</h2>
+        </div>
+      </div>
+
+      <div class="faq-grid">
+        <article class="faq-card">
+          <h3>Do I need to be good at chess?</h3>
+          <p>No. The club should be useful for beginners, intermediate players, and experienced tournament players.</p>
+        </article>
+        <article class="faq-card">
+          <h3>Do I need to bring equipment?</h3>
+          <p>Bring a board and clock if you have them. If not, come anyway and we will help you get into a game.</p>
+        </article>
+        <article class="faq-card">
+          <h3>Are kids welcome?</h3>
+          <p><!-- EDIT THIS --> Replace with your actual scholastic policy, parent supervision rule, and age guidance.</p>
+        </article>
+        <article class="faq-card">
+          <h3>Are there dues?</h3>
+          <p><!-- EDIT THIS --> Replace with your membership fee, drop-in fee, free-trial policy, or donation model.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contact-title">
+      <div class="contact-card">
+        <div>
+          <h2 id="contact-title">Ready to play?</h2>
+          <p>Email the club to confirm the next meeting, ask about events, or volunteer to help organize a night.</p>
+        </div>
+        <a class="button" href="mailto:fairfaxchessclub@example.com?subject=Fairfax%20Chess%20Club%20Inquiry">Contact the club</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Fairfax Chess Club. All rights reserved.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

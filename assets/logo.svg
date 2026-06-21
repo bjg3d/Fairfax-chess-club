@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Fairfax Chess Club logo</title>
+  <desc id="desc">A stylized chess knight inside a circular badge with a checkered edge.</desc>
+  <defs>
+    <linearGradient id="gold" x1="120" y1="80" x2="420" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7d77b"/>
+      <stop offset="1" stop-color="#c8942d"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="100" y1="80" x2="420" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#19335f"/>
+      <stop offset="1" stop-color="#0b1730"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#06111f" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <circle cx="256" cy="256" r="226" fill="url(#navy)"/>
+  <circle cx="256" cy="256" r="206" fill="none" stroke="url(#gold)" stroke-width="16"/>
+  <g opacity="0.24">
+    <path d="M70 170h372M70 256h372M70 342h372M170 70v372M256 70v372M342 70v372" stroke="#ffffff" stroke-width="10"/>
+  </g>
+  <path filter="url(#shadow)" fill="url(#gold)" d="M173 392h168c12 0 22 10 22 22v18H151v-18c0-12 10-22 22-22Zm20-44h126c18 0 32 14 32 32v6H161v-6c0-18 14-32 32-32Zm14-15c4-40 16-75 37-105-24-5-45-18-57-38-10-17-11-36-2-55 9-20 29-34 53-38 37-6 76 9 103 41 25 29 34 68 25 112-4 21-14 45-29 73l-6 10H207Zm80-177c-13-18-32-28-51-25-12 2-21 8-25 17-4 8-3 17 2 26 12 20 39 28 68 20l21-6-11 19c-22 39-36 77-42 113h58c14-27 23-50 27-71 7-34 1-65-17-86-7 14-20 26-38 34-7 3-16 0-19-7-3-8 0-16 8-20 11-5 17-10 19-14Z"/>
+  <circle cx="233" cy="151" r="10" fill="#0b1730"/>
+  <path d="M125 121c33-32 77-50 131-50s98 18 131 50" fill="none" stroke="#f7d77b" stroke-width="11" stroke-linecap="round" opacity="0.9"/>
+  <text x="256" y="470" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" letter-spacing="3" fill="#f7d77b">FAIRFAX</text>
+</svg>
