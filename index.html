@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fairfax Chess Club</title>
-  <meta name="description" content="Fairfax Chess Club is a welcoming chess community for casual play, rated games, lessons, tournaments, and players of every level." />
+  <meta name="description" content="Fairfax Chess Club meets twice a week in Fairfax, Virginia for casual over-the-board chess, friendly games, and chess community." />
   <meta property="og:title" content="Fairfax Chess Club" />
-  <meta property="og:description" content="Casual play, rated games, lessons, tournaments, and a welcoming chess community in Fairfax." />
+  <meta property="og:description" content="Casual chess in Fairfax every Monday and Wednesday. Beginners, casual players, and tournament players are welcome." />
   <meta property="og:image" content="assets/social-preview.svg" />
   <meta name="theme-color" content="#0b1730" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
   <style>
     :root {
       --bg: #071325;
@@ -46,7 +47,8 @@
       line-height: 1.55;
     }
 
-    img, svg {
+    img,
+    svg {
       display: block;
       max-width: 100%;
     }
@@ -150,6 +152,12 @@
       background: rgba(255, 255, 255, 0.07);
       border-color: rgba(255, 255, 255, 0.18);
       box-shadow: none;
+    }
+
+    .button.small {
+      min-height: 40px;
+      padding: 0 14px;
+      font-size: 0.92rem;
     }
 
     .button:hover,
@@ -317,6 +325,13 @@
       color: var(--muted);
     }
 
+    .info-card address,
+    .event-card address {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-style: normal;
+    }
+
     .section-head {
       display: flex;
       align-items: end;
@@ -431,6 +446,10 @@
 
     .event-card .content {
       padding: 22px;
+    }
+
+    .event-card .content .button {
+      margin-top: 18px;
     }
 
     .pill-row {
@@ -650,6 +669,7 @@
     }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -659,12 +679,14 @@
         <img src="assets/logo.svg" alt="Fairfax Chess Club logo" />
         <span>Fairfax Chess Club</span>
       </a>
+
       <div class="nav-links">
+        <a href="#meetups">Meetups</a>
         <a href="#about">About</a>
-        <a href="#events">Events</a>
+        <a href="#events">Formal Games</a>
         <a href="#join">Join</a>
         <a href="#faq">FAQ</a>
-        <a class="button" href="mailto:fairfaxchessclub@example.com?subject=Fairfax%20Chess%20Club%20Inquiry">Contact</a>
+        <a class="button" href="https://www.meetup.com/fairfax-chess-meetup-group/">Meetup Page</a>
       </div>
     </nav>
   </header>
@@ -673,19 +695,20 @@
     <section id="top" class="section hero" aria-labelledby="hero-title">
       <div>
         <p class="eyebrow">Fairfax, Virginia chess community</p>
-        <h1 id="hero-title">Your next great move starts here.</h1>
-        <p class="lead">A welcoming home for casual games, rated play, lessons, tournaments, and chess friends of every age and strength.</p>
+        <h1 id="hero-title">Casual chess in Fairfax every Monday and Wednesday.</h1>
+        <p class="lead">Join friendly over-the-board chess games at local Fairfax restaurants. Beginners, casual players, returning players, and tournament players are welcome.</p>
+
         <div class="hero-actions">
-          <a class="button" href="#join">Join the club</a>
-          <a class="button secondary" href="#events">See upcoming events</a>
+          <a class="button" href="#meetups">See meetup times</a>
+          <a class="button secondary" href="https://www.meetup.com/fairfax-chess-meetup-group/">View Meetup events</a>
         </div>
       </div>
 
       <div class="hero-card" aria-label="Chess club illustration">
         <img src="assets/hero-board.svg" alt="Illustration of chess pieces on a chessboard" />
         <div class="hero-note">
-          <strong>Open to beginners, tournament players, families, and returning players.</strong>
-          <span>Bring a board if you have one. Bring curiosity either way.</span>
+          <strong>No rating required. No RSVP required.</strong>
+          <span>Bring a board if you have one, or just come ready to play.</span>
         </div>
       </div>
     </section>
@@ -694,18 +717,90 @@
       <div class="quick-info">
         <article class="info-card">
           <p class="card-label">When</p>
-          <h3>Weekly meetup</h3>
-          <p><!-- EDIT THIS --> Replace with your regular day and time, for example: Wednesdays, 6:30 to 9:30 PM.</p>
+          <h3>Twice a week</h3>
+          <p>Mondays at 6:00 PM and Wednesdays at 6:00 PM.</p>
         </article>
+
         <article class="info-card">
           <p class="card-label">Where</p>
-          <h3>Fairfax area</h3>
-          <p><!-- EDIT THIS --> Replace with your venue name, street address, parking notes, and room number.</p>
+          <h3>Downtown Fairfax</h3>
+          <p>Mackenzie’s Tunes &amp; Tonics on Mondays and Patriots Pub &amp; Grill on Wednesdays.</p>
         </article>
+
         <article class="info-card">
           <p class="card-label">Who</p>
           <h3>All levels welcome</h3>
-          <p>Kids, adults, new players, club regulars, and tournament competitors can all find a good game.</p>
+          <p>Beginners, casual players, club regulars, families, and tournament competitors can all find a good game.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="meetups" class="section" aria-labelledby="meetups-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Weekly Meetups</p>
+          <h2 id="meetups-title">Two regular chess nights in Fairfax.</h2>
+        </div>
+        <p>Most regulars do not RSVP online, so do not worry if the Meetup attendee count looks low. Just come by, introduce yourself, and ask for a game.</p>
+      </div>
+
+      <div class="events">
+        <article class="event-card">
+          <div class="event-date">
+            <span>Monday</span>
+            <span>6:00 PM</span>
+          </div>
+          <div class="content">
+            <h3>Mackenzie’s Tunes &amp; Tonics</h3>
+            <address>
+              3950 University Dr STE 210<br />
+              Fairfax, VA 22030
+            </address>
+            <p>Casual chess in downtown Fairfax. There is free parking in the garage behind the restaurant.</p>
+            <div class="pill-row">
+              <span class="pill">Casual games</span>
+              <span class="pill">All levels</span>
+              <span class="pill">Bring a set if you can</span>
+            </div>
+            <a class="button small" href="https://www.google.com/maps/search/?api=1&amp;query=3950+University+Dr+STE+210+Fairfax+VA+22030">Get directions</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-date">
+            <span>Wednesday</span>
+            <span>6:00 PM</span>
+          </div>
+          <div class="content">
+            <h3>Patriots Pub &amp; Grill</h3>
+            <address>
+              10560 Main Street, Suite 100<br />
+              Fairfax, VA 22030
+            </address>
+            <p>Wednesday night chess at Patriots in downtown Fairfax City. Bring your own chess set if you have one.</p>
+            <div class="pill-row">
+              <span class="pill">Casual games</span>
+              <span class="pill">All levels</span>
+              <span class="pill">Food &amp; drinks available</span>
+            </div>
+            <a class="button small" href="https://www.google.com/maps/search/?api=1&amp;query=10560+Main+Street+Suite+100+Fairfax+VA+22030">Get directions</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-date">
+            <span>Before you go</span>
+            <span>Check Meetup</span>
+          </div>
+          <div class="content">
+            <h3>Venue changes and updates</h3>
+            <p>Regular meetings are Mondays and Wednesdays, but it is still smart to check the Meetup page for holidays, venue changes, special events, or weather-related updates.</p>
+            <div class="pill-row">
+              <span class="pill">Latest updates</span>
+              <span class="pill">RSVP optional</span>
+            </div>
+            <a class="button small" href="https://www.meetup.com/fairfax-chess-meetup-group/">View Meetup page</a>
+          </div>
         </article>
       </div>
     </section>
@@ -713,7 +808,7 @@
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Why play with us?</p>
+          <p class="eyebrow">What to expect</p>
           <h2 id="about-title">A serious chess club without the intimidating atmosphere.</h2>
         </div>
         <p>Fairfax Chess Club is built around friendly competition, steady improvement, and making it easy for local players to find one another.</p>
@@ -725,20 +820,23 @@
           <h3>Casual play</h3>
           <p>Drop in, meet players, and get paired for friendly games at your pace.</p>
         </article>
+
         <article class="feature-card">
           <div class="icon">♜</div>
-          <h3>Rated nights</h3>
-          <p>Run club-rated or USCF-style events when enough players are interested.</p>
+          <h3>Friendly competition</h3>
+          <p>Play fast games, slow games, clock games, analysis games, or whatever format you and your opponent agree on.</p>
         </article>
+
         <article class="feature-card">
           <div class="icon">♞</div>
-          <h3>Lessons</h3>
-          <p>Learn openings, tactics, endgames, and post-game analysis from stronger players.</p>
+          <h3>Improve together</h3>
+          <p>Review interesting positions, learn from stronger players, and test your openings over the board.</p>
         </article>
+
         <article class="feature-card">
           <div class="icon">♛</div>
           <h3>Community</h3>
-          <p>Connect with local chess families, scholastic players, coaches, and tournament regulars.</p>
+          <p>Connect with local chess players, families, scholastic players, coaches, and tournament regulars.</p>
         </article>
       </div>
     </section>
@@ -748,12 +846,13 @@
         <div>
           <p class="eyebrow">This week</p>
           <h2 id="this-week-title">Come for a game. Stay for the analysis.</h2>
-          <p><!-- EDIT THIS --> Replace this with the most important weekly announcement: meeting status, special lecture, tournament round, or venue change.</p>
+          <p>Weekly meetups are casual, drop-in friendly, and open to players of all strengths. Support the venues by buying food or a drink when you can.</p>
         </div>
+
         <ul class="banner-list">
-          <li><strong>Format:</strong> Casual games and optional analysis</li>
+          <li><strong>Format:</strong> Casual games and optional post-game analysis</li>
           <li><strong>Bring:</strong> Chess set, clock, scorebook, or just yourself</li>
-          <li><strong>Cost:</strong> <!-- EDIT THIS --> Replace with dues, free trial, or donation info</li>
+          <li><strong>Cost:</strong> No formal dues listed. Please support the host venues.</li>
         </ul>
       </div>
     </section>
@@ -761,35 +860,56 @@
     <section id="events" class="section" aria-labelledby="events-title">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Events</p>
-          <h2 id="events-title">Regular formats for every kind of player.</h2>
+          <p class="eyebrow">Formal Games</p>
+          <h2 id="events-title">Interested in slower or more serious games?</h2>
         </div>
-        <p>Use these sample cards as placeholders. Update dates, registration links, and formats as the club calendar becomes firm.</p>
+        <p>Most weekly play is casual. Formal games, rated-style practice, ladders, or mini-events can be listed here as the club schedule becomes more organized.</p>
       </div>
 
       <div class="events">
         <article class="event-card">
-          <div class="event-date"><span>Weekly</span><span>Open Play</span></div>
+          <div class="event-date">
+            <span>Weekly</span>
+            <span>Open Play</span>
+          </div>
           <div class="content">
-            <h3>Club night</h3>
-            <p>Friendly games, clock practice, casual analysis, and newcomer pairings.</p>
-            <div class="pill-row"><span class="pill">All levels</span><span class="pill">Drop-in</span></div>
+            <h3>Casual club nights</h3>
+            <p>Friendly games, clock practice, casual analysis, and newcomer pairings every Monday and Wednesday.</p>
+            <div class="pill-row">
+              <span class="pill">All levels</span>
+              <span class="pill">Drop-in</span>
+            </div>
           </div>
         </article>
+
         <article class="event-card">
-          <div class="event-date"><span>Monthly</span><span>Swiss</span></div>
+          <div class="event-date">
+            <span>Optional</span>
+            <span>Serious Games</span>
+          </div>
           <div class="content">
-            <h3>Rated tournament</h3>
-            <p>A low-pressure tournament night with pairings, clocks, and notation.</p>
-            <div class="pill-row"><span class="pill">Tournament</span><span class="pill">Clock required</span></div>
+            <h3>Longer time controls</h3>
+            <p>Ask at a meetup if you want a slower game with a clock, notation, opening preparation, or tournament-style practice.</p>
+            <div class="pill-row">
+              <span class="pill">Clock optional</span>
+              <span class="pill">Notation optional</span>
+            </div>
           </div>
         </article>
+
         <article class="event-card">
-          <div class="event-date"><span>Quarterly</span><span>Workshop</span></div>
+          <div class="event-date">
+            <span>Coming Soon</span>
+            <span>Schedule</span>
+          </div>
           <div class="content">
-            <h3>Improvement session</h3>
-            <p>Focused lessons on tactics, openings, endgames, or annotated master games.</p>
-            <div class="pill-row"><span class="pill">Learning</span><span class="pill">Beginner friendly</span></div>
+            <h3>Formal events</h3>
+            <p>When the club has scheduled formal games, pairings, mini-tournaments, or rated events, those details can be posted here.</p>
+            <div class="pill-row">
+              <span class="pill">Pairings</span>
+              <span class="pill">Mini-events</span>
+              <span class="pill">Future updates</span>
+            </div>
           </div>
         </article>
       </div>
@@ -800,18 +920,20 @@
         <div class="join-card">
           <p class="eyebrow">Join</p>
           <h2 id="join-title">Your first visit is simple.</h2>
-          <p class="lead">No rating is required. No perfect openings are required. Just show up ready to play, learn, and meet other chess people.</p>
+          <p class="lead">No rating is required. No perfect openings are required. You can just show up, introduce yourself, and ask for a game.</p>
+
           <div class="hero-actions">
-            <a class="button" href="mailto:fairfaxchessclub@example.com?subject=I%20want%20to%20visit%20Fairfax%20Chess%20Club">Email before visiting</a>
+            <a class="button" href="https://www.meetup.com/fairfax-chess-meetup-group/">Visit the Meetup page</a>
             <a class="button secondary" href="#faq">Read FAQ</a>
           </div>
         </div>
+
         <div class="join-card">
           <h3>How it works</h3>
           <ol class="steps">
-            <li><span>Check the latest meeting note on this page before you come.</span></li>
-            <li><span>Introduce yourself when you arrive so we can help you find a good pairing.</span></li>
-            <li><span>Play a few games, review interesting positions, and decide whether membership makes sense.</span></li>
+            <li><span>Pick Monday or Wednesday and check Meetup for the latest note before you come.</span></li>
+            <li><span>Introduce yourself when you arrive so someone can help you find a good pairing.</span></li>
+            <li><span>Play a few games, review interesting positions, and come back whenever you can.</span></li>
           </ol>
         </div>
       </div>
@@ -828,19 +950,32 @@
       <div class="faq-grid">
         <article class="faq-card">
           <h3>Do I need to be good at chess?</h3>
-          <p>No. The club should be useful for beginners, intermediate players, and experienced tournament players.</p>
+          <p>No. Beginners, casual players, intermediate players, and experienced tournament players are welcome.</p>
         </article>
+
+        <article class="faq-card">
+          <h3>Do I need to RSVP?</h3>
+          <p>No. RSVP is helpful, but not required. Regulars often show up even when the online RSVP count looks low.</p>
+        </article>
+
         <article class="faq-card">
           <h3>Do I need to bring equipment?</h3>
-          <p>Bring a board and clock if you have them. If not, come anyway and we will help you get into a game.</p>
+          <p>Bring a chess set and clock if you have them. If not, come anyway and you can usually find someone with a board.</p>
         </article>
+
         <article class="faq-card">
           <h3>Are kids welcome?</h3>
-          <p><!-- EDIT THIS --> Replace with your actual scholastic policy, parent supervision rule, and age guidance.</p>
+          <p>Players of all ages are welcome. Parents or guardians should use their judgment and stay with minors unless they have confirmed another arrangement with a club organizer.</p>
         </article>
+
         <article class="faq-card">
-          <h3>Are there dues?</h3>
-          <p><!-- EDIT THIS --> Replace with your membership fee, drop-in fee, free-trial policy, or donation model.</p>
+          <h3>Are games rated?</h3>
+          <p>Most weekly games are casual. Formal or rated-style events should be listed separately when available.</p>
+        </article>
+
+        <article class="faq-card">
+          <h3>Is there a cost?</h3>
+          <p>There are no formal dues listed on this site. Since the club meets at restaurants, please support the venues by buying food or a drink when you can.</p>
         </article>
       </div>
     </section>
@@ -849,9 +984,10 @@
       <div class="contact-card">
         <div>
           <h2 id="contact-title">Ready to play?</h2>
-          <p>Email the club to confirm the next meeting, ask about events, or volunteer to help organize a night.</p>
+          <p>Check the Meetup page for the latest event notes, venue updates, and discussion threads.</p>
         </div>
-        <a class="button" href="mailto:fairfaxchessclub@example.com?subject=Fairfax%20Chess%20Club%20Inquiry">Contact the club</a>
+
+        <a class="button" href="https://www.meetup.com/fairfax-chess-meetup-group/">Open Meetup</a>
       </div>
     </section>
   </main>
