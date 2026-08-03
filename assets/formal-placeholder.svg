@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Future events placeholder</title>
+<desc id="desc">Branded placeholder image for future tournament and workshop announcements.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#08162b"/>
+    <stop offset="100%" stop-color="#071325"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<g opacity="0.12" stroke="#f2c86e" fill="none">
+  <rect x="120" y="120" width="960" height="660" rx="20"/>
+  <rect x="180" y="180" width="840" height="540" rx="16"/>
+</g>
+<text x="120" y="280" fill="#f2c86e" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="6">FUTURE CALENDAR</text>
+<text x="120" y="365" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900">Tournaments, workshops, and special nights</text>
+<text x="120" y="445" fill="#c9d3e7" font-family="Inter, Arial, sans-serif" font-size="32">Use this spot for pairings, special events, or structured improvement sessions later.</text>
+<g transform="translate(120 530)">
+  <circle cx="80" cy="80" r="80" fill="rgba(242,200,110,0.08)" stroke="#d59b36"/>
+  <text x="80" y="103" text-anchor="middle" fill="#f2c86e" font-family="Georgia, serif" font-size="90">♞</text>
+</g>
+</svg>

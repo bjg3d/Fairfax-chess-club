@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Patriots Pub &amp; Grill placeholder</title>
+<desc id="desc">Branded placeholder image for a future Wednesday meetup photo.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#08162b"/>
+    <stop offset="100%" stop-color="#0d2346"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<rect x="36" y="36" width="1128" height="828" rx="18" fill="none" stroke="#d59b36" stroke-opacity="0.65"/>
+<g opacity="0.16" fill="#f2c86e">
+  <circle cx="250" cy="240" r="130"/>
+  <circle cx="920" cy="260" r="90"/>
+  <circle cx="880" cy="620" r="160"/>
+</g>
+<g transform="translate(120 235)">
+  <rect x="0" y="0" width="160" height="160" rx="20" fill="rgba(242,200,110,0.12)" stroke="#f2c86e"/>
+  <path d="M44 58h72v54H44z" fill="none" stroke="#f2c86e" stroke-width="10"/>
+  <path d="M54 28v24M106 28v24M44 86h72" stroke="#f2c86e" stroke-width="10" stroke-linecap="round"/>
+</g>
+<text x="120" y="500" fill="#f2c86e" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="6">WEDNESDAY MEETUP</text>
+<text x="120" y="585" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900">Patriots Pub &amp; Grill</text>
+<text x="120" y="655" fill="#c9d3e7" font-family="Inter, Arial, sans-serif" font-size="32">Replace with a real Wednesday club photo when available.</text>
+<text x="120" y="715" fill="#8fa2c8" font-family="Inter, Arial, sans-serif" font-size="28">10560 Main Street, Fairfax, VA 22030</text>
+</svg>
